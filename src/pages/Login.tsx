@@ -11,10 +11,8 @@ import { RestaurantMark } from '../components/ui';
 import { ROLE_LABEL, Role } from '../lib/types';
 
 const DEMO_ACCOUNTS: { role: Role; name: string; email: string; password: string; note: string; icon: React.ReactNode }[] = [
-  { role: 'admin', name: 'komndan mispin', email: 'mispin123@gmail.com', password: 'admin123', note: 'Owner — akses penuh', icon: <ShieldCheck size={15} /> },
-  { role: 'kepala_koki', name: 'Rahmat', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Approval laporan & evaluasi', icon: <Flame size={15} /> },
-  { role: 'wakil_koki', name: 'Sudrajat', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Verifikasi & monitoring tim', icon: <UtensilsCrossed size={15} /> },
-  { role: 'anggota', name: 'Doyok', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Checklist tugas line cook', icon: <ChefHat size={15} /> },
+  { role: 'kepala koki', name: 'komndan mispin', email: '', password: 'admin123', note: 'Owner — akses penuh', icon: <ShieldCheck size={15} /> },
+  { role: 'wakil_koki', name: 'wakil Rahmat', email: '', password: 'kkmm123', note: 'Approval laporan & evaluasi', icon: <Flame size={15} /> },
 ];
 
 export default function Login() {
