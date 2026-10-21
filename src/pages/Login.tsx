@@ -29,16 +29,30 @@ export default function Login() {
   const [showDemo, setShowDemo] = useState(true);
 
   const submit = (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (busy) return;
-    setError('');
-    if (!identifier.trim() || !password) { setError('Email/username dan password wajib diisi.'); setShakeNow(); return; }
-    setBusy(true);
-    setTimeout(() => {
-      const res = login(identifier, password);
-      if (res.ok) { navigate('/', { replace: true }); }
-      else { setError(res.error ?? 'Gagal masuk.'); setShakeNow(); }
-      setBusy(false);
+  e?.preventDefault();
+  if (busy) return;
+  setError('');
+  if (!identifier.trim() || !password) { 
+    setError('Email/username dan password wajib diisi'); 
+    return; 
+  }
+
+  setBusy(true);
+
+  // === 1 EMAIL UNTUK SEMUA ===
+  const EMAIL_BERSAMA = 'dapur@nusarasa.co.id';
+  const PASSWORD_BERSAMA = 'nusa123';
+
+  if (identifier === EMAIL_BERSAMA && password === PASSWORD_BERSAMA) {
+    login({ role: 'anggota', name: 'Tim Dapur', email: EMAIL_BERSAMA });
+    navigate('/dashboard');
+  } else {
+    setError('Email atau password salah');
+    setShake(true);
+    setTimeout(() => setShake(false), 500);
+  }
+  setBusy(false);
+}
     }, 650);
   };
   const setShakeNow = () => { setShake(true); window.setTimeout(() => setShake(false), 500); };
