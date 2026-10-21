@@ -13,8 +13,7 @@ import { ROLE_LABEL, Role } from '../lib/types';
 const DEMO_ACCOUNTS: { role: Role; name: string; email: string; password: string; note: string; icon: React.ReactNode }[] = [
   { role: 'kepala koki', name: 'komndan mispin', email: '', password: 'admin123', note: 'Owner — akses penuh', icon: <ShieldCheck size={15} /> },
   { role: 'wakil_koki', name: 'wakil Rahmat', email: '', password: 'kkmm123', note: 'Approval laporan & evaluasi', icon: <Flame size={15} /> },
-];
-
+]
 export default function Login() {
   const { login } = useStore();
   const navigate = useNavigate();
