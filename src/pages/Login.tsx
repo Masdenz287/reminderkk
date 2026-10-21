@@ -11,10 +11,10 @@ import { RestaurantMark } from '../components/ui';
 import { ROLE_LABEL, Role } from '../lib/types';
 
 const DEMO_ACCOUNTS: { role: Role; name: string; email: string; password: string; note: string; icon: React.ReactNode }[] = [
-  { role: 'admin', name: 'Baskara Wira', email: 'admin@nusarasa.co.id', password: 'admin123', note: 'Owner — akses penuh', icon: <ShieldCheck size={15} /> },
-  { role: 'kepala_koki', name: 'Dewi Lestari', email: 'dewi.lestari@nusarasa.co.id', password: 'dewi123', note: 'Approval laporan & evaluasi', icon: <Flame size={15} /> },
-  { role: 'wakil_koki', name: 'Raka Saputra', email: 'raka.saputra@nusarasa.co.id', password: 'raka123', note: 'Verifikasi & monitoring tim', icon: <UtensilsCrossed size={15} /> },
-  { role: 'anggota', name: 'Sari Wulandari', email: 'sari.wulandari@nusarasa.co.id', password: 'sari123', note: 'Checklist tugas line cook', icon: <ChefHat size={15} /> },
+  { role: 'admin', name: 'komndan mispin', email: 'mispin123@gmail.com', password: 'admin123', note: 'Owner — akses penuh', icon: <ShieldCheck size={15} /> },
+  { role: 'kepala_koki', name: 'Rahmat', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Approval laporan & evaluasi', icon: <Flame size={15} /> },
+  { role: 'wakil_koki', name: 'Sudrajat', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Verifikasi & monitoring tim', icon: <UtensilsCrossed size={15} /> },
+  { role: 'anggota', name: 'Doyok', email: 'kampungkecilmm@gmail.com', password: 'kkmm123', note: 'Checklist tugas line cook', icon: <ChefHat size={15} /> },
 ];
 
 export default function Login() {
@@ -49,15 +49,15 @@ export default function Login() {
     <div className="min-h-screen bg-navy-950 flex items-stretch font-sans">
       {/* ── LEFT: cinematic kitchen ── */}
       <div className="relative hidden lg:flex lg:w-[54%] xl:w-[58%] overflow-hidden">
-        <img src="/images/kitchen-hero.jpg" alt="Suasana dapur Restoran Nusa Rasa saat persiapan pagi" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="/images/kitchen-hero.jpg" alt="Suasana dapur Restoran kampung kecil Mm saat persiapan pagi" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/30 via-navy-950/20 to-navy-950" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-navy-950/15 to-navy-950/40" />
         <div className="absolute inset-0 flex flex-col justify-between p-10 xl:p-14">
           <div className="flex items-center gap-3">
             <RestaurantMark size={46} />
             <div className="leading-tight">
-              <p className="font-display font-bold text-white text-xl tracking-tight">Nusa Rasa</p>
-              <p className="text-[9px] font-extrabold uppercase tracking-[0.3em] text-gold-400">Fine Indonesian Cuisine · Est. 2012</p>
+              <p className="font-display font-bold text-white text-xl tracking-tight">kampung kecil Mm</p>
+              <p className="text-[9px] font-extrabold uppercase tracking-[0.3em] text-gold-400">Rasanya ngeraja Harganya ngerakyat · Est. 2012</p>
             </div>
           </div>
 
@@ -81,14 +81,14 @@ export default function Login() {
         <div className="flex lg:hidden items-center gap-2.5 px-6 pt-6">
           <RestaurantMark size={38} />
           <div className="leading-tight">
-            <p className="font-display font-bold text-white text-[16px]">Nusa Rasa</p>
+            <p className="font-display font-bold text-white text-[16px]">Kampung kecil</p>
             <p className="text-[8px] font-extrabold uppercase tracking-[0.25em] text-gold-400">Kitchen Operations</p>
           </div>
         </div>
 
         <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 xl:px-14 py-8 w-full max-w-xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .55, ease: 'easeOut' }}>
-            <h2 className="font-display font-bold text-white text-3xl tracking-tight">Selamat Datang.</h2>
+            <h2 className="font-display font-bold text-white text-3xl tracking-tight">Selamat Datang Di Remind Kkmm.</h2>
             <p className="text-sky-100/70 text-[12.5px] font-medium mt-1.5">Masuk dengan akun dapur Anda untuk membuka checklist hari ini.</p>
 
             {/* form */}
@@ -100,7 +100,7 @@ export default function Login() {
                   <input
                     id="identifier" type="text" autoComplete="username" autoFocus
                     value={identifier} onChange={e => setIdentifier(e.target.value)}
-                    placeholder="contoh: sari.wulandari@nusarasa.co.id"
+                    placeholder="contoh: muhammadDimas@gmail.com"
                     className="w-full h-12 pl-11 pr-4 rounded-2xl bg-white/7 ring-1 ring-white/15 text-white placeholder-slate-400 text-[13.5px] font-semibold focus:outline-none focus:ring-2 focus:ring-gold-400 focus:bg-white/10 transition-all"
                   />
                 </div>
@@ -158,7 +158,7 @@ export default function Login() {
             </div>
 
             <p className="mt-6 text-center text-[9px] font-semibold text-slate-500 leading-relaxed">
-              Restoran Nusa Rasa · Sistem Checklist Dapur v2.4 — Data terenkripsi &amp; tersimpan di server.<br />Dilindungi RBAC (Role-Based Access Control). Unauthorized access is prohibited.
+              Restoran Kampung Kecil Mm · Sistem Checklist Dapur v2.4 — Data terenkripsi &amp; tersimpan di server.<br />Dilindungi RBAC (Role-Based Access Control). Unauthorized access is prohibited.
             </p>
           </motion.div>
         </div>
